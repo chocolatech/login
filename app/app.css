@@ -3,19 +3,3 @@ body{
     padding: 0;
     background-color: #F5F5F5;
 }
-.login-form {
-    width: 250px;
-    margin: 0 auto;
-    position: absolute;
-    top: 40%;
-    left:45%;
-    text-align: center;
-    background-color: #03A9F4;
-    padding: 10px;
-}
-.login-form input{
-    margin-bottom: 2px;
-}
-.login-form button {
-    margin: 10px auto;
-}
