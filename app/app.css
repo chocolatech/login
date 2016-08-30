@@ -6,8 +6,9 @@ body{
 .login-form {
     width: 250px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
     top: 40%;
+    left:45%;
     text-align: center;
     background-color: #03A9F4;
     padding: 10px;
