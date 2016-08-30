@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+.login-form {
+    width: 250px;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    text-align: center;
+    background-color: #03A9F4;
+}
+.login-form input{
+    margin-bottom: 2px;
+}
+.login-form button {
+    margin: 10px auto;
+}
+.login-form input:first-child{
+    margin-top: 10px;
+}
