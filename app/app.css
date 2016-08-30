@@ -10,13 +10,11 @@ body{
     top: 40%;
     text-align: center;
     background-color: #03A9F4;
+    padding: 10px;
 }
 .login-form input{
     margin-bottom: 2px;
 }
 .login-form button {
     margin: 10px auto;
-}
-.login-form input:first-child{
-    margin-top: 10px;
 }
