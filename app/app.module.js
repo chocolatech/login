@@ -1,1 +1,1 @@
-angular.module('app',['ngRoute','loginScreen']);
+angular.module('app',['ngRoute','loginScreen', 'loggedIn']);

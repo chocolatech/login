@@ -1,1 +1,1 @@
-angular.module('logged-in', []);
+angular.module('loggedIn', []);
