@@ -5,6 +5,7 @@ var fs = require('fs');
 
 app.use(express.static('app'));
 app.use('/node_modules', express.static('node_modules'));
+app.use('/dist', express.static('dist'));
 
 var usersFilePath = path.join(__dirname, '/api/data.json');
 

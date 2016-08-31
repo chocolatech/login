@@ -23,7 +23,7 @@ gulp.task('watch', function () {
 
 //join serve && dev
 gulp.task('dev', function (cb) {
-  runSequence(['minify:scripts', 'serve', 'watch'], cb);
+  runSequence(['minify:vendor.scripts', 'minify:scripts', 'serve', 'watch'], cb);
 });
 
 gulp.task('serve', function (cb) {
@@ -33,10 +33,19 @@ gulp.task('serve', function (cb) {
 });
 
 gulp.task('minify:scripts', function(){
-  gulp.src('app/**/*.js')
+  gulp.src(['app/**/*.module.js', 'app/**/*.js'])
   .pipe(concat('scripts.js'))
   .pipe(gulp.dest('./dist/scripts'))
   .pipe(rename('scripts.min.js'))
+  .pipe(uglify())
+  .pipe(gulp.dest('./dist/scripts'))
+});
+
+gulp.task('minify:vendor.scripts', function(){
+  gulp.src('node_modules/**/*.min.js')
+  .pipe(concat('vendor.scripts.js'))
+  .pipe(gulp.dest('./dist/scripts'))
+  .pipe(rename('vendor.scripts.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('./dist/scripts'))
 });

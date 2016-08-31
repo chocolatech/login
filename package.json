@@ -22,7 +22,8 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.0"
   },
   "devDependencies": {
     "express": "^4.14.0",

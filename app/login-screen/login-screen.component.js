@@ -1,7 +1,7 @@
 angular.module('loginScreen').component('loginScreen', {
     templateUrl: 'login-screen/login-screen.template.html',
-    controller: ['$location', function ($location) {
+    controller: ['Login', function (Login) {
         var vm = this;
-        this.login = login();
+        vm.login = Login();
     }]
 });
