@@ -9,16 +9,16 @@ angular.module('loginScreen').component('loginScreen', {
             var l= new Login();
 
             l.login().then(function(response){
-                if (response.status == 200) {
-                    $location.path('/home');
-                }
-                else if (response.status == 401) {
-                    console.log('wrong auth');
-                }
-                else if (response.status == 500) {
-                    console.log('server error');
-                    $location.path('/error');
-                }
+                // if (response.status == 200) {
+                //     $location.path('/home');
+                // }
+                // else if (response.status == 401) {
+                //     console.log('wrong auth');
+                // }
+                // else if (response.status == 500) {
+                //     console.log('server error');
+                //     $location.path('/error');
+                //}
 
             });
         };
