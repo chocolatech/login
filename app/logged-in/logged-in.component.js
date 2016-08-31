@@ -3,7 +3,7 @@ angular.module('loggedIn').component('loggedIn', {
     controller:['$http', function($http){
         var vm = this;
         $http.get('/data').then(function(response){
-            vm.cred = response.data.data[0];
+            vm.cred = response.data;
         });
     }]
 });

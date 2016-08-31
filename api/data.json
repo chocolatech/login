@@ -1,12 +1,4 @@
 {
-    "data": [
-        {
-            "name": "Bob",
-            "status": "logged in"
-        },
-        {
-            "name": "Alice",
-            "status": "not logged in"
-        }
-    ]
+    "name": "Bob",
+    "status": "logged in"
 }
