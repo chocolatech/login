@@ -1,25 +1,26 @@
 angular.module('core').
     service('Login', ['$http', '$location', function ($http, $location) {
-        var vm = this;
         return function () {
-            $http.get('/data').then(function (response) {
-                console.log(response);
-                // vm.cred = response.data;
-                // if (response.status == 200) {
-                //     // $location.path('/home');
-                // }
-                // else if (response.status == 401) {
-                //     console.log('wrong auth');
-                // }
-                // else if (response.status == 500) {
-                //     console.log('server error');
-                //     $location.path('/error');
-                // }
 
-                return response;
+            this.login = function (username, password) {
 
-            });
-        }
+                //return $http.post('/login', {"username": username, "password": password}, {headers: {'Content-Type': 'application/json'}});
+                return $http({
+                    method: 'POST',
+                    url: '/login',
+                    // set the headers so angular passing info as form data (not request payload)
+                    headers : { 'Content-Type': 'application/json' },
+                    data: {
+                        username: username,
+                        password: password
+                    }
 
+                });
+
+
+            };
+        };
+
+        // return $http.get('/data');
     }
     ]);

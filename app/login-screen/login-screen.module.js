@@ -1,1 +1,1 @@
-angular.module('loginScreen', []);
+angular.module('loginScreen', ['core']);

@@ -11,18 +11,18 @@ gulp.task('default', function () {
 });
 
 gulp.task('js', function () {
-  gulp.src('app/', 'dist/')
+  gulp.src('app/')
     .pipe(livereload());
 });
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch(['app/', 'dist/'], ['js']);
+  gulp.watch('app/', ['js']);
 });
 
 //join serve && dev
 gulp.task('dev', function (cb) {
-  runSequence(['minify:vendor.scripts', 'minify:scripts', 'serve', 'watch'], cb);
+  runSequence(['watch'], cb);
 });
 
 gulp.task('serve', function (cb) {

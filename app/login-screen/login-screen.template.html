@@ -1,5 +1,5 @@
 <form class="login-form">
-    <input type="text" placeholder="username"><br>
-    <input type="password" placeholder="password"><br>
-    <button type="button" ng-click="$ctrl.login()">Log in</button>
+    <input type="text" placeholder="username" ng-model="$ctrl.username"><br>
+    <input type="password" placeholder="password" ng-model="$ctrl.password"><br>
+    <button type="button" ng-click="$ctrl.submit()">Log in</button>
 </form>
