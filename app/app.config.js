@@ -4,11 +4,11 @@ config(['$locationProvider', '$routeProvider',
         //$locationProvider.hashPrefix('!');
 
         $routeProvider.
-            when('/login', {
+            when('/signin', {
                 template: '<login-screen></login-screen>'
             }).
             when('/home', {
                 template: '<logged-in></logged-in>'
             }).
-            otherwise('/login');
+            otherwise('/signin');
     }]);
