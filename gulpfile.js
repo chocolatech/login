@@ -11,13 +11,13 @@ gulp.task('default', function () {
 });
 
 gulp.task('js', function () {
-  gulp.src('app/')
+  gulp.src(['app/', 'api/'])
     .pipe(livereload());
 });
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('app/', ['js']);
+  gulp.watch(['app/', 'api/'], ['js']);
 });
 
 //join serve && dev
