@@ -10,5 +10,8 @@ config(['$locationProvider', '$routeProvider',
             when('/home', {
                 template: '<logged-in></logged-in>'
             }).
+            when('/error', {
+                template: '<error500></error500>'
+            }).
             otherwise('/signin');
     }]);

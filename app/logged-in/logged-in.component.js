@@ -4,7 +4,9 @@ angular.module('loggedIn').component('loggedIn', {
         var vm = this;
             $http.get('/userInfo').then(function (response) {
                 vm.userInfo = response.data;
-            })
+            });
+
+            
 
     }]
 });
