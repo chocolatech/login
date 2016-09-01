@@ -22,7 +22,7 @@ gulp.task('watch', function () {
 
 //join serve && dev
 gulp.task('dev', function (cb) {
-  runSequence(['watch'], cb);
+  runSequence(['serve','watch'], cb);
 });
 
 gulp.task('serve', function (cb) {

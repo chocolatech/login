@@ -8,11 +8,11 @@ angular.module('core').
                 return $http({
                     method: 'POST',
                     url: '/login',
-                    // set the headers so angular passing info as form data (not request payload)
+                    // set the headers so angular is passing info as form data (not request payload)
                     headers : { 'Content-Type': 'application/json' },
                     data: {
-                        username: username,
-                        password: password
+                        username: 'username',
+                        password: 'password'
                     }
 
                 });
