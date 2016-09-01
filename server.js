@@ -21,6 +21,10 @@ app.get('/data', function (req, res) {
 
 
 app.post('/login', function (req, res) {
+
+  console.log("arguments ",arguments);
+
+
   console.log(req.body);
   var readable = fs.createReadStream(usersFilePath);
   readable.pipe(res);

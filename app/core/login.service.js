@@ -1,26 +1,28 @@
 angular.module('core').
-    service('Login', ['$http', '$location', function ($http, $location) {
+    service('LoginService', ['$http', '$location', function ($http, $location) {
+
         return function () {
 
             this.login = function (username, password) {
 
-                //return $http.post('/login', {"username": username, "password": password}, {headers: {'Content-Type': 'application/json'}});
-                return $http({
-                    method: 'POST',
-                    url: '/login',
-                    // set the headers so angular is passing info as form data (not request payload)
-                    headers : { 'Content-Type': 'application/json' },
-                    data: {
-                        username: 'username',
-                        password: 'password'
-                    }
+               $http.post('/login', {"username": username, "password": password})
 
-                });
+                .then(function(response){
+                if (response.status == 200) {
+                    $location.path('/home');
+                }
+                else if (response.status == 401) {
+                    console.log('wrong auth');
+                }
+                else if (response.status == 500) {
+                    console.log('server error');
+                    $location.path('/error');
+                }
+
+            });
 
 
             };
-        };
-
-        // return $http.get('/data');
+        }
     }
     ]);
