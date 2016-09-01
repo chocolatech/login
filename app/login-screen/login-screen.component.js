@@ -4,11 +4,9 @@ angular.module('loginScreen').component('loginScreen', {
 
         var vm = this;
         vm.submit = function(){
-        console.log('valaues:', vm.username, vm.password);
+        console.log('values:', vm.username, vm.password);
 
-            var l= new LoginService();
-
-            l.login(vm.username, vm.password);
+            LoginService.login(vm.username, vm.password);
         };
 
     }]

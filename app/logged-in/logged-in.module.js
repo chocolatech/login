@@ -1,1 +1,1 @@
-angular.module('loggedIn', []);
+angular.module('loggedIn', ['core']);

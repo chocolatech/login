@@ -11,9 +11,9 @@ app.use('/node_modules', express.static('node_modules'));
 app.use('/dist', express.static('dist'));
 
 
-var usersFilePath = path.join(__dirname, '/api/data.json');
+var usersFilePath = path.join(__dirname, '/api/userInfo.json');
 
-app.get('/data', function (req, res) {
+app.get('/userInfo', function (req, res) {
   var readable = fs.createReadStream(usersFilePath);
   readable.pipe(res);
 });
@@ -21,11 +21,6 @@ app.get('/data', function (req, res) {
 
 
 app.post('/login', function (req, res) {
-
-  console.log("arguments ",arguments);
-
-
-  console.log(req.body);
   var readable = fs.createReadStream(usersFilePath);
   readable.pipe(res);
 });
