@@ -1,39 +1,30 @@
 angular.module('core').
     service('LoginService', ['$http', '$location', function ($http, $location) {
 
-        this.login = function (username, password) {
+        var vm = this;
+        vm.login = function (username, password) {
 
             $http.post('/login', { "username": username, "password": password })
 
                 .then(function (response) {
-                    if (response.status == 200) {
-                        $location.path('/home');
-                    }
-                    else if (response.status == 401) {
-                        console.log('wrong auth');
-                    }
-                    else if (response.status == 500) {
-                        console.log('server error');
-                        $location.path('/error');
-                    }
+                    $location.path('/home');
 
+                },
+                function (response) {
+                    vm.route(response.status);
                 });
 
         };
 
-        // this.passStatusCode = function (response) {
-        //     if (response.status == 200) {
-        //         $location.path('/home');
-        //     }
-        //     else if (response.status == 401) {
-        //         console.log('wrong auth');
-        //     }
-        //     else if (response.status == 500) {
-        //         console.log('server error');
-        //         $location.path('/error');
-        //     }
-
-        // }
+        vm.route = function (status) {
+            if (status == 401) {
+                console.log('wrong auth');
+            }
+            else if (status == 500) {
+                console.log('server error');
+                $location.path('/error');
+            }
+        }
 
     }
     ]);
