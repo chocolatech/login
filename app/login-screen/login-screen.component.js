@@ -3,10 +3,29 @@ angular.module('loginScreen').component('loginScreen', {
     controller: ['LoginService', '$location', function (LoginService, $location) {
 
         var vm = this;
-        vm.submit = function(){
-        console.log('values:', vm.username, vm.password);
+        vm.isError401=false;
 
-            LoginService.login(vm.username, vm.password);
+        vm.submit = function () {
+            console.log('values:', vm.username, vm.password);
+
+            LoginService.login(vm.username, vm.password).then(function (response) {
+                $location.path('/home');
+
+            },
+                function (response) {
+                    route(response.status);
+                });
+
+            function route(status) {
+                if (status == 401) {
+                    console.log('wrong auth');
+                    vm.isError401=true;
+                }
+                else if (status == 500) {
+                    console.log('server error');
+                    $location.path('/error');
+                }
+            }
         };
 
     }]
