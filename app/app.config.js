@@ -8,7 +8,7 @@ config(['$locationProvider', '$routeProvider',
                 template: '<login-screen></login-screen>'
             }).
             when('/home', {
-                template: '<logged-in></logged-in>'
+                template: '<navbar></navbar'
             }).
             when('/error', {
                 template: '<error500></error500>'

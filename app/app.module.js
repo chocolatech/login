@@ -1,1 +1,1 @@
-angular.module('app',['ngRoute','loginScreen', 'loggedIn', 'core', 'error500']);
+angular.module('app',['ngRoute','loginScreen', 'navbar', 'core', 'error500']);
