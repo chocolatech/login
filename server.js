@@ -13,12 +13,11 @@ app.use('/dist', express.static('dist'));
 
 var usersFilePath = path.join(__dirname, '/api/userInfo.json');
 
+
 app.get('/userInfo', function (req, res) {
   var readable = fs.createReadStream(usersFilePath);
   readable.pipe(res);
 });
-
-
 
 app.post('/login', function (req, res) {
   if (req.body.username == '500') {

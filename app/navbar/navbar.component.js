@@ -6,16 +6,12 @@ angular.module('navbar').component('navbar', {
             vm.userInfo = response.data;
         });
 
-        $('li').click(function (e) {
-            e.preventDefault();
-            $('li').removeClass('active');
-            $(this).addClass('active');
-        });
+        // $('li').click(function (e) {
+        //     e.preventDefault();
+        //     $('li').removeClass('active');
+        //     $(this).addClass('active');
+        // });
 
-        // vm.isActive = false;
-        // vm.activeButton = function () {
-        //     vm.isActive = !vm.isActive;
-        // }
-
+        vm.isActive = false;
     }]
 });

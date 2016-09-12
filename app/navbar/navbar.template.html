@@ -7,7 +7,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="">Hi, {{$ctrl.userInfo.username}}!</a>
+                    <a href="">Hi, {{$ctrl.userInfo.user.username}}!</a>
                 </li>
             </ul>
         </div>
@@ -17,33 +17,8 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <!--<li ng-class="{'active': isActive}" ng-click="activeButton()">-->
-                <li>
-                    <a href="">Title 1</a>
-                </li>
-                <li>
-                    <a href="">Title 2</a>
-                </li>
-                <li>
-                    <a href="">Title 3</a>
-                </li>
-                <li>
-                    <a href="">Title 4</a>
-                </li>
-                <li>
-                    <a href="">Title 5</a>
-                </li>
-                <li>
-                    <a href="">Title 6</a>
-                </li>
-                <li>
-                    <a href="">Title 7</a>
-                </li>
-                <li>
-                    <a href="">Title 8</a>
-                </li>
-                <li>
-                    <a href="">Title 9</a>
+                <li ng-repeat="item in $ctrl.userInfo.menu">
+                    <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
                 </li>
             </ul>
         </div>
