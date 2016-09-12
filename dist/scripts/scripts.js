@@ -1,9 +1,9 @@
 angular.module('app',['ngRoute','loginScreen', 'navbar', 'core', 'error500', 'dashboard']);
 angular.module('core', []);
-angular.module('error500', []);
 angular.module('dashboard',['navbar']);
-angular.module('navbar', ['core']);
+angular.module('error500', []);
 angular.module('loginScreen', ['core']);
+angular.module('navbar', ['core']);
 angular.module('app').
 config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider){
@@ -38,20 +38,11 @@ angular.module('core').
 
     }
     ]);
-angular.module('error500').component('error500', {
-    templateUrl: 'error500/error500.template.html'
-});
 angular.module('dashboard').component('dashboard', {
     templateUrl: 'dashboard/dashboard.template.html'
 });
-angular.module('navbar').component('navbar', {
-    templateUrl: 'navbar/navbar.template.html',
-    controller: ['$http', 'LoginService', function ($http, LoginService) {
-        var vm = this;
-            $http.get('/userInfo').then(function (response) {
-                vm.userInfo = response.data;
-            });
-    }]
+angular.module('error500').component('error500', {
+    templateUrl: 'error500/error500.template.html'
 });
 angular.module('loginScreen').component('loginScreen', {
     templateUrl: 'login-screen/login-screen.template.html',
@@ -83,5 +74,14 @@ angular.module('loginScreen').component('loginScreen', {
             }
         };
 
+    }]
+});
+angular.module('navbar').component('navbar', {
+    templateUrl: 'navbar/navbar.template.html',
+    controller: ['$http', 'LoginService', function ($http, LoginService) {
+        var vm = this;
+            $http.get('/userInfo').then(function (response) {
+                vm.userInfo = response.data;
+            });
     }]
 });
