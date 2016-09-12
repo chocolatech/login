@@ -12,5 +12,10 @@ angular.module('navbar').component('navbar', {
             $(this).addClass('active');
         });
 
+        // vm.isActive = false;
+        // vm.activeButton = function () {
+        //     vm.isActive = !vm.isActive;
+        // }
+
     }]
 });
