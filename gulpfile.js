@@ -48,3 +48,9 @@ gulp.task('minify:vendor.scripts', function(){
   .pipe(uglify())
   .pipe(gulp.dest('./dist/scripts'));
 });
+
+gulp.task('minify:vendor.styles', function () {
+  gulp.src('node_modules/**/*.css')
+    .pipe(concat("vendor.styles.css"))
+    .pipe(gulp.dest('./dist/styles'));
+});
