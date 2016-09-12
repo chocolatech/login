@@ -22,7 +22,7 @@ gulp.task('watch', function () {
 
 //join serve && dev
 gulp.task('dev', function (cb) {
-  runSequence(['minify:vendor.scripts', 'minify:scripts', 'serve','watch'], cb);
+  runSequence(['minify:vendor.styles', 'minify:vendor.scripts', 'minify:scripts', 'serve','watch'], cb);
 });
 
 gulp.task('serve', function (cb) {
