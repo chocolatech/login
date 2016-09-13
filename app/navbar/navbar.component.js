@@ -13,5 +13,10 @@ angular.module('navbar').component('navbar', {
         // });
 
         vm.isActive = false;
+        vm.showedMenu = true;
+
+        vm.toggleMenu = function () {
+            vm.showedMenu = !vm.showedMenu;
+        };
     }]
 });
