@@ -14,20 +14,29 @@
     </div>
     </div>
 </nav>
-<div class="container-fluid" ng-if="$ctrl.showedMenu">
+<div class="container" ng-if="$ctrl.showedMenu">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li ng-repeat="item in $ctrl.menu">
-                    <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
+                <li ng-repeat="item in $ctrl.menu" class="row">
+                    <div class="col-md-6">
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
+                    </div>
+
                 </li>
+
             </ul>
         </div>
+        
     </div>
 </div>
-<div class="col-md-1 col-md-offset-2 nav-button">
+<div class="col-md-1 nav-button" ng-class="{'col-md-offset-2': $ctrl.showedMenu}">
     <div class="nav navbar navbar-header">
         <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="$ctrl.toggleMenu()">
   <span class="glyphicon glyphicon-menu-hamburger " aria-hidden="true "></span>
 </button>
+    </div>
 </div>
