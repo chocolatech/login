@@ -9,6 +9,10 @@
     b. find how to miniaturize angular component
     c. data
     d. bootstrap modals instead of routing
+3. additional requirements 
+    a.more modulatity
+    b. linter
+    c. gulp in order // webpack!
 ################
 <FEATURES>
 webpack, font awesome

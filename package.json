@@ -30,6 +30,7 @@
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.1.0",
     "gulp-livereload": "^3.8.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
