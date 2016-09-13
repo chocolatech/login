@@ -9,3 +9,7 @@
     b. find how to miniaturize angular component
     c. data
     d. bootstrap modals instead of routing
+################
+<FEATURES>
+webpack, font awesome
+</FEATURES>
