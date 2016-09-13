@@ -19,6 +19,11 @@ app.get('/userInfo', function (req, res) {
   readable.pipe(res);
 });
 
+app.get('/menu', function (req, res) {
+  var readable = fs.createReadStream(path.join(__dirname, '/api/menu.json'));
+  readable.pipe(res);
+});
+
 app.post('/login', function (req, res) {
   if (req.body.username == '500') {
     res.status(500).send('Server down!');

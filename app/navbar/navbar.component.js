@@ -5,12 +5,9 @@ angular.module('navbar').component('navbar', {
         $http.get('/userInfo').then(function (response) {
             vm.userInfo = response.data;
         });
-
-        // $('li').click(function (e) {
-        //     e.preventDefault();
-        //     $('li').removeClass('active');
-        //     $(this).addClass('active');
-        // });
+        $http.get('/menu').then(function (response) {
+            vm.menu = response.data;
+        });
 
         vm.isActive = false;
         vm.showedMenu = true;
