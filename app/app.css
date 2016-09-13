@@ -24,10 +24,12 @@ input[type="password"] {
     font-size:16px;
 }
 
-.navbar-header{
+.col-md-1 .navbar-header{
   float:left;
   margin-bottom: 0;
-  top: 10px;
+}
+.nav-button{
+  padding-left: 0;
 }
 
 

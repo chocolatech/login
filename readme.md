@@ -1,6 +1,6 @@
 1. hidable menu (hamburger - glyphicons)
-    a. hamburger eat
-    b. toggle on click
+    // a. hamburger eat
+    // b. toggle on click
     c. there shall be icons, any icons
     d. icons visible after toggle
     e. menu items with links to views
