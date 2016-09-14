@@ -1,1 +1,1 @@
-angular.module('dashboard',['navbar']);
+angular.module('dashboard',['navbar', 'topNav']);

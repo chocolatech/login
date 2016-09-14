@@ -1,19 +1,3 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div id="navbar" class="navbar-collapse collapse">
-            <!--<div class="nav navbar navbar-header">
-                <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="$ctrl.toggleMenu()"">
-  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-</button>-->
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="">Hi, {{$ctrl.userInfo.username}}!</a>
-            </li>
-        </ul>
-    </div>
-    </div>
-</nav>
 <div class="container" ng-if="$ctrl.showedMenu">
     <div class="row">
         <div class="col-md-2 sidebar">
@@ -25,12 +9,9 @@
                     <div class="col-md-6">
                         <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
                     </div>
-
                 </li>
-
             </ul>
-        </div>
-        
+        </div> 
     </div>
 </div>
 <div class="col-md-1 nav-button" ng-class="{'col-md-offset-2': $ctrl.showedMenu}">

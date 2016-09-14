@@ -10,7 +10,7 @@
     c. data
     d. bootstrap modals instead of routing
 3. additional requirements 
-    a.more modulatity
+    a. more modulatity
     b. linter
     c. gulp in order // webpack!
 ################
