@@ -3,10 +3,10 @@
         <div class="col-md-2 sidebar">
             <ul class="nav nav-sidebar">
                 <li ng-repeat="item in $ctrl.menu" class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3 icon">
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-9">
                         <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
                     </div>
                 </li>

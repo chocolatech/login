@@ -4,6 +4,8 @@ html, body{
     padding: 0;
     height: 100%;
     }
+
+    /*login-screen*/
 login-screen {
     height: 100%;
 }
@@ -24,19 +26,24 @@ input[type="password"] {
     font-size:16px;
 }
 
+/*top-nav*/
 .col-md-1 .navbar-header{
   float:left;
   margin-bottom: 0;
 }
+
+/*nav-sidebar*/
 .nav-button{
   padding-left: 0;
 }
 
-
-
-/*
- * Base structure
- */
+.glyphicon.glyphicon-star{
+  color: #337ab7;
+}
+.col-md-3.icon{
+  text-align: center;
+  padding-right: 0;
+}
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
@@ -90,6 +97,7 @@ body {
   margin-right: -21px; /* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
+  font-size: 20px;
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
@@ -104,7 +112,7 @@ body {
 
 
 /*
- * Main content
+ * Main content dashboard
  */
 
 .main {
@@ -118,24 +126,4 @@ body {
 }
 .main .page-header {
   margin-top: 0;
-}
-
-
-/*
- * Placeholder dashboard ideas
- */
-
-.placeholders {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.placeholders h4 {
-  margin-bottom: 0;
-}
-.placeholder {
-  margin-bottom: 20px;
-}
-.placeholder img {
-  display: inline-block;
-  border-radius: 50%;
 }
