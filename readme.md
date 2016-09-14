@@ -13,6 +13,7 @@
     a. more modulatity
     b. linter
     //c. gulp in order
+    d. history of git changes
 ################
 <FEATURES>
 webpack, font awesome
