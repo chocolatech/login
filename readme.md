@@ -1,5 +1,5 @@
-1. hidable menu (hamburger - glyphicons)
-    // a. hamburger eat
+1. hidable menu
+    a. fold-like icon IN the panel, no hamburger
     // b. toggle on click
     c. there shall be icons, any icons
     d. icons visible after toggle
@@ -8,11 +8,11 @@
     a. generic container for views (module)
     b. find how to miniaturize angular component
     c. data
-    d. bootstrap modals instead of routing
+    d. views with routing (4 for a start), 'proper' views, no modals/popups
 3. additional requirements 
     a. more modulatity
     b. linter
-    c. gulp in order // webpack!
+    //c. gulp in order
 ################
 <FEATURES>
 webpack, font awesome
