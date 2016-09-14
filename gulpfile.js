@@ -21,7 +21,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dev', function (cb) {
-  runSequence(['serve','watch'], cb);
+  runSequence(['index', 'serve', 'watch'], cb);
 });
 gulp.task('prod', function (cb) {
   runSequence(['minify:vendor.styles', 'minify:vendor.scripts', 'minify:scripts'], cb);
@@ -32,35 +32,25 @@ gulp.task('serve', function (cb) {
     cb(err);
   });
 });
-// gulp.task('index', function () {
-//   var target = gulp.src('app/index.html');
-//   var sources = gulp.src([
+gulp.task('index', function () {
 
-//     "node_modules/angular/angular.min.js",
-//     "node_modules/angular-route/angular-route.min.js",
-//     "node_modules/jquery/dist/jquery.min.js",
-//     "node_modules/bootstrap/dist/js/bootstrap.min.js",
-//     "app/app.module.js",
-//     "app/app.config.js",
-//     "app/app.controller.js",
-//     "app/login-screen/login-screen.module.js",
-//     "app/login-screen/login-screen.component.js",
-//     "app/navbar/navbar.module.js",
-//     "app/navbar/navbar.component.js",
-//     "app/dashboard/dashboard.module.js",
-//     "app/dashboard/dashboard.component.js",
-//     "app/core/core.module.js",
-//     "app/core/login.service.js",
-//     "app/error500/error500.module.js",
-//     "app/error500/error500.component.js",
-//     "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
-//     "node_modules/bootstrap/dist/css/bootstrap.min.css",
-//     "app/app.css"
-//   ], { read: false });
-
-//   return target.pipe(inject(sources))
-//     .pipe(gulp.dest('app'));
-// });
+  gulp.src('./app/index.html')
+    .pipe(inject(gulp.src([
+      "./node_modules/angular/angular.min.js",
+      "./node_modules/angular-route/angular-route.min.js",
+      "./node_modules/jquery/dist/jquery.min.js",
+      "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+      "./app/app.module.js",
+      "./app/app.config.js",
+      "./app/app.controller.js",
+      "./app/**/*.module.js",
+      "./app/**/*.service.js",
+      "./app/**/*.component.js",
+      "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "./app/*.css"
+    ], { read: false }), { relative: true }))
+    .pipe(gulp.dest('./app'));
+});
 
 gulp.task('minify:scripts', function () {
   gulp.src(['app/**/*.module.js', 'app/**/*.js'])
