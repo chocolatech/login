@@ -94,7 +94,6 @@ body {
   margin-bottom: 20px;
   margin-left: -20px;
   font-size: 20px;
-  transition: 0.3s
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
@@ -106,7 +105,13 @@ body {
   color: #fff;
   background-color: #428bca;
 }
-
+.sidebar-container {
+  transition: all linear 5s;
+  width: 300px;
+}
+.ng-hide {
+  width: 0;
+}
 
 /*
  * Main content dashboard

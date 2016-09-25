@@ -1,4 +1,4 @@
-<div class="container menu-container" ng-if="$ctrl.showedMenu">
+<div class="container menu-container sidebar-container" ng-hide="$ctrl.showedMenu">
     <div class="row">
         <div class="col-md-2 sidebar">
             <ul class="nav nav-sidebar">
@@ -14,7 +14,7 @@
         </div> 
     </div>
 </div>
-<div class="col-md-1 nav-button" ng-class="{'col-md-offset-2': $ctrl.showedMenu}">
+<div class="col-md-1 nav-button" ng-class="{'col-md-offset-2': !$ctrl.showedMenu}">
     <div class="nav navbar navbar-header">
         <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="$ctrl.toggleMenu()">
   <span class="glyphicon glyphicon-menu-hamburger " aria-hidden="true "></span>
