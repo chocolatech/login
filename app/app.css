@@ -99,17 +99,17 @@ body {
   padding-right: 20px;
   padding-left: 20px;
 }
-.nav-sidebar > li > .active ,
-.nav-sidebar > li > .active:hover,
-.nav-sidebar > li > .active:focus {
+.nav-sidebar > li > .col-md-9 > .active ,
+.nav-sidebar > li > .col-md-9 > .active:hover,
+.nav-sidebar > li > .col-md-9 > .active:focus {
   color: #fff;
   background-color: #428bca;
 }
 .sidebar-container {
-  transition: all linear 5s;
+  transition: width 1s linear;
   width: 300px;
 }
-.ng-hide {
+.sidebar-container.ng-hide {
   width: 0;
 }
 

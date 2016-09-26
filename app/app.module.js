@@ -1,1 +1,1 @@
-angular.module('app',['ngRoute','loginScreen', 'topNav', 'navbar', 'core', 'error500', 'dashboard']);
+angular.module('app',['ngRoute','loginScreen', 'topNav', 'navbar', 'core', 'error500', 'dashboard', 'ngAnimate']);
