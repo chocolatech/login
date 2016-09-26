@@ -74,8 +74,7 @@ body {
 
   .sidebar {
     display: none;
-    position: fixed;
-    top: 51px;
+    width: 25%;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -106,8 +105,8 @@ body {
   background-color: #428bca;
 }
 .sidebar-container {
-  transition: width 1s linear;
-  width: 300px;
+  position: fixed;
+  transition: width 0.5s linear;
 }
 .sidebar-container.ng-hide {
   width: 0;
