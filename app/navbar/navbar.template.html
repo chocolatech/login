@@ -1,6 +1,6 @@
 <div class="container menu-container sidebar-container">
     <div class="row">
-        <div class="col-md-2 sidebar">
+        <div class="sidebar" ng-class="{'col-md-2': !$ctrl.showedMenu, 'col-md-1': $ctrl.showedMenu}">
             <ul class="nav nav-sidebar">
                 <li ng-repeat="item in $ctrl.menu" class="row">
                     <div class="col-md-3 icon">

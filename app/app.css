@@ -5,6 +5,7 @@ html, body{
     height: 100%;
     }
 
+
     /*login-screen*/
 login-screen {
     height: 100%;
@@ -37,6 +38,13 @@ input[type="password"] {
   padding-left: 0;
 }
 
+.col-md-1.nav-button{
+  left: 0.3em;
+}
+
+.col-md-offset-2.nav-button{
+  left: -9%;
+}
 .glyphicon.glyphicon-star{
   color: #337ab7;
 }
@@ -78,18 +86,25 @@ body {
     left: 0;
     z-index: 1000;
     display: block;
-    padding: 20px;
+    padding-top: 2%;
+    padding-left: 3%;
+    text-align: center;
     background-color: #EEEEEE;
     border-right: 1px solid #eee;
+    min-height: 600px;
+    transition: width 0.5s linear;
   }
 
-
+.sidebar.col-md-1{
+  width: 4%;
+}
 /* Sidebar navigation */
 .nav-sidebar {
   margin-right: -21px; /* 20px padding + 1px border */
   margin-bottom: 20px;
   margin-left: -20px;
   font-size: 20px;
+  padding-top: 15px;
 }
 .nav-sidebar > li > a {
   padding-right: 20px;
@@ -109,9 +124,6 @@ body {
   width: 0;
 }
 
-.menu-content {
-   transition: width 0.5s linear;
-}
 /*
  * Main content dashboard
  */
