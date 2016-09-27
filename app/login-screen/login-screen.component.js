@@ -6,7 +6,6 @@ angular.module('loginScreen').component('loginScreen', {
         vm.isError401=false;
 
         vm.submit = function () {
-            console.log('values:', vm.username, vm.password);
 
             LoginService.login(vm.username, vm.password).then(function (response) {
                 $location.path('/home');

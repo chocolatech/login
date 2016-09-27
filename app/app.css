@@ -105,12 +105,15 @@ body {
 }
 .sidebar-container {
   position: fixed;
-  transition: width 0.5s linear;
+ 
 }
-.sidebar-container.ng-hide {
+.ng-hide {
   width: 0;
 }
 
+.menu-content {
+   transition: width 0.5s linear;
+}
 /*
  * Main content dashboard
  */

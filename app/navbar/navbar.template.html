@@ -1,4 +1,4 @@
-<div class="container menu-container sidebar-container" ng-hide="$ctrl.showedMenu">
+<div class="container menu-container sidebar-container">
     <div class="row">
         <div class="col-md-2 sidebar">
             <ul class="nav nav-sidebar">
@@ -6,7 +6,7 @@
                     <div class="col-md-3 icon">
                         <span class="glyphicon glyphicon-star"></span>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9 menu-content" ng-hide="$ctrl.showedMenu">
                         <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
                     </div>
                 </li>
