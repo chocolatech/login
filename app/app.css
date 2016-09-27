@@ -40,10 +40,12 @@ input[type="password"] {
 
 .col-md-1.nav-button{
   left: 0.3em;
+  transition: all 0.5s linear;
 }
 
-.col-md-offset-2.nav-button{
-  left: -9%;
+.menu-open-offset.nav-button{
+  left: 8%;
+  transition: all 0.5s linear;
 }
 .glyphicon.glyphicon-star{
   color: #337ab7;
