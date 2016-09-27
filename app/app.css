@@ -73,9 +73,7 @@ body {
  */
 
   .sidebar {
-    display: none;
     top: 0;
-    width: 27%;
     bottom: 0;
     left: 0;
     z-index: 1000;
@@ -105,8 +103,8 @@ body {
 }
 .sidebar-container {
   position: fixed;
- 
 }
+
 .ng-hide {
   width: 0;
 }
@@ -118,15 +116,11 @@ body {
  * Main content dashboard
  */
 
-.main {
-  padding: 20px;
-}
-@media (min-width: 768px) {
   .main {
     padding-right: 40px;
     padding-left: 40px;
   }
-}
+
 .main .page-header {
   margin-top: 0;
 }
