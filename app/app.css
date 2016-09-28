@@ -92,7 +92,7 @@ body {
     padding-left: 3%;
     background-color: #EEEEEE;
     border-right: 1px solid #eee;
-    min-height: 600px;
+    min-height: 1200px;
     transition: width 0.5s linear;
   }
 
