@@ -139,12 +139,12 @@ body {
     left: -3%;
     position: absolute;
     top: 0;
-    width: 3%;
+    width: 4%;
     text-align: center;
     min-width: 42px;
   }
   #main {
-    left: 0;
+    left: 1em;
   }
 }
 
