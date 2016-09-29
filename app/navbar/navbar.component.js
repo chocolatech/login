@@ -1,10 +1,10 @@
 angular.module('navbar').component('navbar', {
     templateUrl: 'navbar/navbar.template.html',
-    controller: ['$http', 'LoginService', function ($http, LoginService) {
+    controller: [function () {
         var vm = this;
-        $http.get('/menu').then(function (response) {
-            vm.menu = response.data;
-        });
+        // $http.get('/menu').then(function (response) {
+        //     vm.menu = response.data;
+        // });
 
         vm.isActive = false;
         vm.showedMenu = true;
