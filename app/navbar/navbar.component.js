@@ -1,17 +1,15 @@
 angular.module('navbar').component('navbar', {
     templateUrl: 'navbar/navbar.template.html',
-    controller: ['$http', 'LoginService', function ($http, LoginService) {
+    controller: [function () {
         var vm = this;
-        $http.get('/menu').then(function (response) {
-            vm.menu = response.data;
-        });
 
         vm.isActive = false;
-        vm.showedMenu = true;
-        vm.iconClass= 'col-md-2';
+        
+        $('[data-toggle=offcanvas]').click(function () {
+            $('.row-offcanvas').toggleClass('active');
+            $('.collapse').toggleClass('in').toggleClass('hidden-xs').toggleClass('visible-xs');
+            $('.apa').toggleClass('active');
+        });
 
-        vm.toggleMenu = function () {
-            vm.showedMenu = !vm.showedMenu;
-        };
     }]
 });

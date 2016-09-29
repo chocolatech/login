@@ -1,23 +1,13 @@
-<div class="container menu-container sidebar-container">
-    <div class="row">
-        <div class="sidebar" ng-class="{'col-md-2': !$ctrl.showedMenu, 'col-md-1': $ctrl.showedMenu}">
-            <ul class="nav nav-sidebar">
-                <li ng-repeat="item in $ctrl.menu" class="row">
-                    <div class="col-md-3 icon">
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <div class="col-md-9 menu-content" ng-hide="$ctrl.showedMenu">
-                        <a ng-class="{'active': $ctrl.isActive==$index}" ng-click="$ctrl.isActive=$index" href="">{{item}}</a>
-                    </div>
-                </li>
-            </ul>
-        </div> 
+<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+    <ul class="nav" id="menu">
+        <li><a href=""><i class="fa fa-2x fa-list-alt"></i> <span class="collapse in hidden-xs menu-item">View 1</span></a></li>
+        <li><a href=""><i class="fa fa-2x fa-camera"></i> <span class="collapse in hidden-xs menu-item">View 2</span></a></li>
+        <li><a href=""><i class="fa fa-2x fa-cube"></i> <span class="collapse in hidden-xs menu-item">View 3</span></a></li>
+        <li><a href=""><i class="fa fa-2x fa-calculator"></i> <span class="collapse in hidden-xs menu-item">View 4</span></a></li>
+        <li><a href=""><i class="fa fa-2x fa-calendar-minus-o"></i> <span class="collapse in hidden-xs menu-item">View 5</span></a></li>
+    </ul>
+    <div class="nav-button">
+        <p class="apa"><a data-toggle="offcanvas"><i class="fa fa-navicon fa-2x"></i></a></p>
     </div>
-</div>
-<div class="col-md-1 nav-button" ng-class="{'menu-open-offset': !$ctrl.showedMenu}">
-    <div class="nav navbar navbar-header">
-        <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="$ctrl.toggleMenu()">
-  <span class="glyphicon glyphicon-menu-hamburger " aria-hidden="true "></span>
-</button>
-    </div>
+
 </div>
