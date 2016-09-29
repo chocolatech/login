@@ -147,3 +147,10 @@ body {
     left: 0;
   }
 }
+
+
+.menu-item {
+  vertical-align: super;
+  padding-left: 1em;
+  font-size: larger;
+}
