@@ -1,5 +1,5 @@
 1. Login screen  
-- error handling  
+a. error handling  
 - username 401 alert  
 - username 500 redirect to ugly page  
 - to login use any other username, pass not required  
