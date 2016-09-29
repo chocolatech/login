@@ -1,20 +1,13 @@
-1. hidable menu
-    a. fold-like icon IN the panel, no hamburger
-    // b. toggle on click
-    c. there shall be icons, any icons
-    d. icons visible after toggle
-    e. menu items with links to views
-2. there shall be miniatures of views in the main panel
-    a. generic container for views (module)
-    b. find how to miniaturize angular component
-    c. data
-    d. views with routing (4 for a start), 'proper' views, no modals/popups
-3. additional requirements 
-    a. more modulatity
-    b. linter
-    //c. gulp in order
-    d. history of git changes
-################
-<FEATURES>
-webpack, font awesome
-</FEATURES>
+1. Login screen  
+- error handling  
+- username 401 alert  
+- username 500 redirect to ugly page  
+- to login use any other username, pass not required  
+2. collapsable menu  
+- folds to icons  
+- pushes main content forth when open and back when closed  
+- animation for menu items when folding/unfolding  
+- arrow-like button below menu items for sliding menu  
+- two-way arrow for open and closed menu  
+- links to different views, content displayed in main area, no modals  
+- more modularity :)  
