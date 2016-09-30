@@ -4,6 +4,10 @@ angular.module('navbar').component('navbar', {
         var vm = this;
 
         vm.isActive = false;
+
+        vm.toggleMenu= function(){
+            vm.isActive=!vm.isActive;
+        };
         
         $('[data-toggle=offcanvas]').click(function () {
             $('.row-offcanvas').toggleClass('active');

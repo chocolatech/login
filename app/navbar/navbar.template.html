@@ -6,8 +6,8 @@
         <li><a href=""><i class="fa fa-2x fa-calculator"></i> <span class="collapse in hidden-xs menu-item">View 4</span></a></li>
         <li><a href=""><i class="fa fa-2x fa-calendar-minus-o"></i> <span class="collapse in hidden-xs menu-item">View 5</span></a></li>
     </ul>
-    <div class="nav-button">
-        <p class="apa"><a data-toggle="offcanvas"><i class="fa fa-navicon fa-2x"></i></a></p>
+    <div class="nav-button" ng-click="$ctrl.toggleMenu()">
+        <p class="apa"><a data-toggle="offcanvas"><i class="fa fa-2x" ng-class="{'fa-arrow-left': !$ctrl.isActive, 'fa-arrow-right': $ctrl.isActive}"></i></a></p>
     </div>
 
 </div>
