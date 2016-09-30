@@ -96,7 +96,7 @@ body {
  * off canvas sidebar
  * --------------------------------------------------
  */
-
+/*
 @media screen and (max-width: 768px) {
   #sidebar {
     min-width: 44px;
@@ -113,6 +113,7 @@ body {
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    left: 0;
   }
   .row-offcanvas-left.active {
     left: 45%;
@@ -121,16 +122,16 @@ body {
     left: -45%;
     position: absolute;
     top: 0;
-    width: 45%;
   }
-}
+}*/
 
 @media screen and (min-width: 768px) {
   .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
-    transition: all 0.25s ease-out;
+    transition: all 0.4s ease-out;
+    left: -2px; /*needs explicit width */
   }
   .row-offcanvas-left.active {
     left: 3%;
