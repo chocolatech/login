@@ -4,6 +4,9 @@ angular.module('navbar').component('navbar', {
         var vm = this;
 
         vm.isActive = false;
+        vm.Active = function(){
+            return vm.isActive;
+        };
 
         vm.toggleMenu= function(){
             vm.isActive=!vm.isActive;
