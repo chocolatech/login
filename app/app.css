@@ -57,9 +57,6 @@ body {
   border: 0;
 }
 
-
-
-
 .wrapper,
 .row {
   height: 100%;
@@ -85,6 +82,8 @@ body {
   padding-left: 0;
   float: left;
   min-height: 100%;
+  min-width: 44px;
+     transition: all 0.4s ease-out;
 }
 
 #sidebar .collapse.in {
@@ -96,54 +95,25 @@ body {
   overflow: hidden;
 }
 
-#main {
-  padding: 15px;
-  left: 0;
-}
-
 
 /*
  * off canvas sidebar
  * --------------------------------------------------
  */
-
-@media screen and (max-width: 768px) {
-  #sidebar {
-    min-width: 44px;
-  }
-  #main {
-    width: 1%;
-    left: 0;
-  }
-  #sidebar .visible-xs {
-    display: inline !important;
-  }
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
-    left: 0;
-  }
-  .row-offcanvas-left.active {
-    left: 45%;
-  }
-  .row-offcanvas-left.active .sidebar-offcanvas {
-    left: -45%;
-    position: absolute;
-    top: 0;
-  }
-}
  /*needs explicit width */
-@media screen and (min-width: 768px) {
+
   .row-offcanvas {
     position: relative;;
-    transition: all 0.4s ease-out;
     left: 0;
   }
   .row-offcanvas-left.active {
     left: 3%;
   }
+
+  .sidebar-offcanvas {
+    left: 3%;
+  }
+
   .row-offcanvas-left.active .sidebar-offcanvas {
     left: -3%;
     position: absolute;
@@ -153,9 +123,10 @@ body {
     min-width: 42px;
   }
   #main {
+    padding: 15px;
     left: 1em;
+    transition: all 0.4s ease-out;
   }
-}
 
 
 .menu-item {
@@ -171,8 +142,4 @@ body {
 .nav-button .apa{
   flex: 1;
   text-align: right;
-}
-
-.apa.active {
-  margin-right: 20%;
 }
