@@ -17,11 +17,9 @@ angular.module('loginScreen').component('loginScreen', {
 
             function route(status) {
                 if (status == 401) {
-                    console.log('wrong auth');
                     vm.isError401=true;
                 }
                 else if (status == 500) {
-                    console.log('server error');
                     $location.path('/error');
                 }
             }
