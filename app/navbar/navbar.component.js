@@ -11,8 +11,6 @@ angular.module('navbar').component('navbar', {
         
         $('[data-toggle=offcanvas]').click(function () {
             $('.row-offcanvas').toggleClass('active');
-            // $('.collapse').toggleClass('hidden-xs').toggleClass('visible-xs');
-            // $('.apa').toggleClass('active');
         });
 
     }]

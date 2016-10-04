@@ -27,6 +27,16 @@ input[type="password"] {
     font-size:16px;
 }
 
+/*server error*/
+    h2.server-error{
+        margin: 0;
+    }
+    
+    .server-error {
+        text-align: center;
+        font-size: 58px;
+    }
+
 /*top-nav*/
 .col-md-1 .navbar-header{
   float:left;
