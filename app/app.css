@@ -111,7 +111,7 @@ body {
   }
 
   .sidebar-offcanvas {
-    left: 3%;
+    left: 0;
   }
 
   .row-offcanvas-left.active .sidebar-offcanvas {
