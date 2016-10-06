@@ -6,8 +6,7 @@ angular.module('loginScreen').component('loginScreen', {
         vm.isError401 = false;
 
         document.getElementById("username")
-            .addEventListener("keyup", function (event) {
-                event.preventDefault();
+            .addEventListener("keydown", function (event) {
                 if (event.keyCode == 13) {
                     document.getElementById("submit-button").click();
                 }
