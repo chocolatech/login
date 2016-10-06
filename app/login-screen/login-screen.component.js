@@ -3,7 +3,15 @@ angular.module('loginScreen').component('loginScreen', {
     controller: ['LoginService', '$location', function (LoginService, $location) {
 
         var vm = this;
-        vm.isError401=false;
+        vm.isError401 = false;
+
+        document.getElementById("username")
+            .addEventListener("keyup", function (event) {
+                event.preventDefault();
+                if (event.keyCode == 13) {
+                    document.getElementById("submit-button").click();
+                }
+            });
 
         vm.submit = function () {
 
@@ -17,7 +25,7 @@ angular.module('loginScreen').component('loginScreen', {
 
             function route(status) {
                 if (status == 401) {
-                    vm.isError401=true;
+                    vm.isError401 = true;
                 }
                 else if (status == 500) {
                     $location.path('/error');
