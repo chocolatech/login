@@ -2,8 +2,8 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <strong>Warning!</strong> Wrong username or password.
 </div>
-<div class="input-group well well-lg login-form">
+<form class="input-group well well-lg login-form" ng-submit="$ctrl.submit()">
     <input type="text" class="form-control" placeholder="username" autofocus ng-model="$ctrl.username"><br>
     <input type="password" class="form-control" id="password" placeholder="password" ng-model="$ctrl.password"><br>
-    <button type="button" class="btn btn-default" id="submit-button" ng-click="$ctrl.submit()">Log in</button>
-</div>
+    <button type="submit" class="btn btn-default" id="submit-button" ng-click="$ctrl.submit()">Log in</button>
+</form>

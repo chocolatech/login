@@ -5,13 +5,6 @@ angular.module('loginScreen').component('loginScreen', {
         var vm = this;
         vm.isError401 = false;
 
-        document.getElementById("password")
-            .addEventListener("keydown", function (event) {
-                if (event.keyCode == 13) {
-                    document.getElementById("submit-button").click();
-                }
-            });
-
         vm.submit = function () {
 
             LoginService.login(vm.username, vm.password).then(function (response) {
