@@ -1,1 +1,1 @@
-angular.module('topNav', []);
+angular.module('topNav', ['core']);

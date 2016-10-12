@@ -1,5 +1,6 @@
 angular.module('loginScreen').component('loginScreen', {
     templateUrl: 'login-screen/login-screen.template.html',
+    
     controller: ['LoginService', '$location', function (LoginService, $location) {
 
         var vm = this;

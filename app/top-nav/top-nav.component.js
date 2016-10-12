@@ -1,8 +1,8 @@
 angular.module('topNav').component('topNav', {
     templateUrl: 'top-nav/top-nav.template.html',
-    controller: ['$http', function ($http) {
+    controller: ['UserInfoService', function (UserInfoService) {
         var vm = this;
-        $http.get('/userInfo').then(function (response) {
+        UserInfoService.getUserInfo().then(function (response) {
             vm.userInfo = response.data;
         });
     }]
