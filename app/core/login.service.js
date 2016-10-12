@@ -6,11 +6,6 @@ angular.module('core').
 
             return $http.post('/login', { "username": username, "password": password });
 
-
-
         };
-
-
-
     }
     ]);
