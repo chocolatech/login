@@ -2,7 +2,7 @@ angular.module('loginScreen').component('loginScreen', {
     templateUrl: 'login-screen/login-screen.template.html',
     
     controller: ['LoginService', '$location', function (LoginService, $location) {
-
+        console.log("buhahah");
         var vm = this;
         vm.isError401 = false;
 

@@ -1,1 +1,1 @@
-angular.module('app',['ui.router','loginScreen', 'topNav', 'navbar', 'core', 'error500', 'dashboard', 'ngAnimate']);
+angular.module('app',['ui.router','loginScreen', 'topNav', 'navbar', 'core', 'error500', 'dashboard', 'ngAnimate', 'view1']);

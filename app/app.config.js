@@ -24,33 +24,52 @@ angular.module('app').
         function ($stateProvider, $urlRouterProvider) {
 
             $stateProvider
-                .state('signin', {
+                .state('error500', {
+                    url: '/error',
+                    views: {
+                        'content': {
+                            component: 'error500'
+                        },
+
+                    },
+                }).state('signin', {
                     url: '/signin',
                     views: {
-                        'content@signin': {
-                            component: 'login-screen'
-                        }
+                        'content@': {
+                            component: 'loginScreen'
+                        },
+
                     },
                 }).state('inside', {
                     // url: '/bulletinBoard',
+                    abstract: true,
                     views: {
-                        'header': {
-                            component: 'top-nav'
+                        'header@': {
+                            component: 'topNav'
                         },
-                        'menu': {
+                        'menu@': {
                             component: 'navbar'
                         }
+
                     },
                     // templateUrl: '../src/app/bulletinBoard/views/bulletinBoard.part.html'
-                }).state('inside.dashboard', {
+                }).state('dashboard', {
+                    parent: 'inside',
                     url: '/home',
                     views: {
-                        content: {
+                        'content@': {
                             component: 'dashboard'
+                        }
+                    }
+                }).state('inside.view1', {
+                    url: '/view1',
+                    views: {
+                        'content': {
+                            component: 'view1'
                         }
                     }
                 }),
 
-            $urlRouterProvider.otherwise('/signin');
+                $urlRouterProvider.otherwise('/signin');
         }
     ]);
