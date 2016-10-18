@@ -44,17 +44,21 @@ angular.module('app').
                     // url: '/bulletinBoard',
                     abstract: true,
                     views: {
-                        'header@': {
-                            component: 'topNav'
-                        },
+
                         'menu@': {
                             component: 'navbar'
                         }
 
                     },
                     // templateUrl: '../src/app/bulletinBoard/views/bulletinBoard.part.html'
-                }).state('dashboard', {
-                    parent: 'inside',
+                }).state('inside.header', {
+                    url: '/home',
+                    views: {
+                        'header@': {
+                            component: 'topNav'
+                        }
+                    }
+                }).state('inside.dashboard', {
                     url: '/home',
                     views: {
                         'content@': {
