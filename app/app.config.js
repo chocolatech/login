@@ -27,7 +27,7 @@ angular.module('app').
                 .state('error500', {
                     url: '/error',
                     views: {
-                        'content': {
+                        '@': {
                             component: 'error500'
                         },
 
@@ -35,33 +35,28 @@ angular.module('app').
                 }).state('signin', {
                     url: '/signin',
                     views: {
-                        'content@': {
+                        '@': {
                             component: 'loginScreen'
                         },
 
                     },
                 }).state('inside', {
-                    // url: '/bulletinBoard',
                     abstract: true,
                     views: {
 
-                        'menu@': {
-                            component: 'navbar'
-                        }
 
                     },
-                    // templateUrl: '../src/app/bulletinBoard/views/bulletinBoard.part.html'
-                }).state('inside.header', {
+                }).state('inside.menu', {
                     url: '/home',
                     views: {
-                        'header@': {
-                            component: 'topNav'
+                        '@': {
+                            component: 'navbar'
                         }
                     }
                 }).state('inside.dashboard', {
                     url: '/home',
                     views: {
-                        'content@': {
+                        'content@inside.dashboard': {
                             component: 'dashboard'
                         }
                     }
