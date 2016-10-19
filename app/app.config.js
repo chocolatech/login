@@ -31,7 +31,7 @@ angular.module('app').
                             component: 'error500'
                         },
 
-                    },
+                    }
                 }).state('signin', {
                     url: '/signin',
                     views: {
@@ -39,29 +39,24 @@ angular.module('app').
                             component: 'loginScreen'
                         },
 
-                    },
+                    }
                 }).state('inside', {
                     abstract: true,
                     views: {
-                    },
-                }).state('inside.header', {
-                    url: '/home',
-                    views: {
                         '@': {
+                            component: 'inside'
+                        },
+                        'header@inside': {
                             component: 'topNav'
-                        }
-                    }
-                }).state('inside.menu', {
-                    url: '/home',
-                    views: {
-                        '@': {
+                        },
+                        'menu@inside': {
                             component: 'navbar'
                         }
                     }
                 }).state('inside.dashboard', {
                     url: '/home',
                     views: {
-                        'content@': {
+                        'content@inside': {
                             component: 'dashboard'
                         }
                     }
