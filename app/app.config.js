@@ -43,38 +43,28 @@ angular.module('app').
                 }).state('inside', {
                     abstract: true,
                     views: {
-                        'topnav@': {
+                    },
+                }).state('inside.header', {
+                    url: '/home',
+                    views: {
+                        '@': {
                             component: 'topNav'
-                        },
-                        'menu@': {
+                        }
+                    }
+                }).state('inside.menu', {
+                    url: '/home',
+                    views: {
+                        '@': {
                             component: 'navbar'
-                        },
-                        'dashboard@': {
+                        }
+                    }
+                }).state('inside.dashboard', {
+                    url: '/home',
+                    views: {
+                        'content@': {
                             component: 'dashboard'
                         }
-
-                    },
-                // }).state('inside.header', {
-                //     url: '/home',
-                //     views: {
-                //         '@': {
-                //             component: 'topNav'
-                //         }
-                //     }
-                // }).state('inside.menu', {
-                //     url: '/home',
-                //     views: {
-                //         '@': {
-                //             component: 'navbar'
-                //         }
-                //     }
-                // }).state('inside.dashboard', {
-                //     url: '/home',
-                //     views: {
-                //         'content@': {
-                //             component: 'dashboard'
-                //         }
-                //     }
+                    }
                 }).state('inside.view1', {
                     url: '/view1',
                     views: {
