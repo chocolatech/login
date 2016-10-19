@@ -41,39 +41,30 @@ angular.module('app').
 
                     },
                 }).state('inside', {
-                    abstract: true,
-                    views: {
-                    },
-                }).state('inside.header', {
                     url: '/home',
                     views: {
                         '@': {
+                            component: 'inside',
+                        },
+                        'header@inside': {
                             component: 'topNav'
-                        }
-                    }
-                }).state('inside.menu', {
-                    url: '/home',
-                    views: {
-                        '@': {
+                        },
+                        'menu@inside': {
                             component: 'navbar'
-                        }
-                    }
-                }).state('inside.dashboard', {
-                    url: '/home',
-                    views: {
-                        'content@': {
+                        },
+                        'dashboard@inside': {
                             component: 'dashboard'
                         }
-                    }
+                    },
                 }).state('inside.view1', {
-                    url: '/view1',
-                    views: {
-                        'content': {
-                            component: 'view1'
-                        }
+                url: '/view1',
+                views: {
+                    'dashboard@inside': {
+                        component: 'view1'
                     }
-                }),
+                }
+            });
 
-                $urlRouterProvider.otherwise('/signin');
+            $urlRouterProvider.otherwise('/signin');
         }
     ]);
